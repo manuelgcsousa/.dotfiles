@@ -13,4 +13,4 @@ PKGS=(
 )
 
 # link with GNU stow.
-stow -v kitty zsh nvim 
+stow -v kitty nvim zsh
