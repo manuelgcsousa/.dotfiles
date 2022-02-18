@@ -21,6 +21,10 @@
         {
             "before": ["<S-Tab>"],
             "commands": [":tabprevious"]
+        },
+        {
+            "before": ["<leader>"],
+            "commands": [":tabclose"]
         }
     ],
     "vim.visualModeKeyBindings": [
