@@ -13,6 +13,14 @@
         {
             "before": ["<leader>", "w"],
             "commands": ["workbench.action.files.save"]
+        },
+        {
+            "before": ["<Tab>"],
+            "commands": [":tabnext"]
+        },
+        {
+            "before": ["<S-Tab>"],
+            "commands": [":tabprevious"]
         }
     ],
     "vim.visualModeKeyBindings": [
