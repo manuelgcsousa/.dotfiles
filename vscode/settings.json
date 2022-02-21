@@ -11,7 +11,7 @@
     "vim.smartRelativeLine": true,
     "vim.normalModeKeyBindingsNonRecursive": [
         {
-            "before": ["<leader>", "w"],
+            "before": ["<Leader>", "w"],
             "commands": ["workbench.action.files.save"]
         },
         {
@@ -23,7 +23,7 @@
             "commands": [":tabprevious"]
         },
         {
-            "before": ["<leader>"],
+            "before": ["<Leader>", "q"],
             "commands": [":tabclose"]
         }
     ],
