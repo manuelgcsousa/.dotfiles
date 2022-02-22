@@ -3,9 +3,12 @@
 return require("packer").startup(function(use)
     use "wbthomason/packer.nvim"
     use "L3MON4D3/LuaSnip"
+    use "fladson/vim-kitty"
     use "hrsh7th/cmp-buffer"
     use "hrsh7th/cmp-nvim-lsp"
     use "hrsh7th/nvim-cmp"
+    use "nvim-lua/plenary.nvim"
+    use "jose-elias-alvarez/null-ls.nvim"
     use "joshdick/onedark.vim"
     use "kyazdani42/nvim-tree.lua"
     use "kyazdani42/nvim-web-devicons"
@@ -14,5 +17,4 @@ return require("packer").startup(function(use)
     use "onsails/lspkind-nvim"
     use "romgrk/barbar.nvim"
     use "tpope/vim-surround"
-    use "fladson/vim-kitty"
 end)

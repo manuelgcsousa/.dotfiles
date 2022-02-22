@@ -4,6 +4,7 @@ local cmp     = require("cmp")
 local luasnip = require("luasnip")
 local lspkind = require("lspkind")
 local lsp     = require("lspconfig")
+local null_ls = require("null-ls")
 
 local check_backspace = function()
     local col = vim.fn.col "." - 1
@@ -67,7 +68,7 @@ cmp.setup{
 }
 
 
--- LSP mappings
+-- "nvim-lsp" mappings
 local on_attach = function(client)
     local map = vim.api.nvim_set_keymap
     local opts = { noremap = true, silent = true }
@@ -77,5 +78,13 @@ local on_attach = function(client)
     map("n", "<Leader>hd", "<cmd>lua vim.lsp.buf.hover()<CR>",       opts)
 end
 
--- LSPs setup
+-- "nvim-lsp" setup
 lsp.pyright.setup{ on_attach = on_attach } -- Python
+
+
+-- "null-ls" setup
+null_ls.setup({
+    sources = {
+        null_ls.builtins.diagnostics.pylama,
+    },
+})

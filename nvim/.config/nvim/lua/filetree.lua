@@ -28,5 +28,5 @@ au BufEnter NvimTree setlocal statusline=%!DisableST()
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
-map("n", "<C-e>",     ":NvimTreeToggle<CR>",  opts)
+map("n", "<Leader>e", ":NvimTreeToggle<CR>",  opts)
 map("n", "<Leader>r", ":NvimTreeRefresh<CR>", opts)
