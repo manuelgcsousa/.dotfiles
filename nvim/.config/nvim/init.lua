@@ -41,8 +41,6 @@ local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
 map("n", "<Leader>w", ":w<CR><Space><Left>", opts) -- quick save
-map("n", "<Leader>v", ":vnew<CR>",           opts) -- new vertical split
-map("n", "<Leader>h", ":new<CR>",            opts) -- new horizontal split
 map("n", "<Leader>c", ":noh<CR>",            opts) -- clean search highlight
 
 map("v", "<C-c>", "\"+yi",      { silent = true }) -- Ctrl-c

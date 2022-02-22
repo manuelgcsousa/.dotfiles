@@ -32,7 +32,7 @@ cmp.setup{
             elseif check_backspace() then
                 fallback()
             else
-                callback()
+                --callback()
             end
         end, {
             "i",
@@ -73,13 +73,22 @@ local on_attach = function(client)
     local map = vim.api.nvim_set_keymap
     local opts = { noremap = true, silent = true }
     
-    map("n", "<Leader>vd", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-    map("n", "<Leader>gd", "<cmd>lua vim.lsp.buf.definition()<CR>",  opts)
-    map("n", "<Leader>hd", "<cmd>lua vim.lsp.buf.hover()<CR>",       opts)
+    map("n", "<Leader>d", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
+    --map("n", "<Leader>g", "<cmd>lua vim.lsp.buf.definition()<CR>",  opts)
+    map("n", "<Leader>h", "<cmd>lua vim.lsp.buf.hover()<CR>",       opts)
 end
 
 -- "nvim-lsp" setup
-lsp.pyright.setup{ on_attach = on_attach } -- Python
+lsp.pyright.setup{ -- Python
+    on_attach = on_attach,
+    settings = {
+        python = {
+            analysis = {
+                typeCheckingMode = "basic"
+            }
+        }
+    }
+} 
 
 
 -- "null-ls" setup
