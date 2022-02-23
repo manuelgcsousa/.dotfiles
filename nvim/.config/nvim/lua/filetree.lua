@@ -14,19 +14,10 @@ require("nvim-tree").setup{
     }
 }
 
--- change filetree background color and disable statusline.
-vim.cmd[[
-hi NvimTreeNormal guibg=#141414
-
-function! DisableST()
-  return " "
-endfunction
-au BufEnter NvimTree setlocal statusline=%!DisableST()
-]]
-
 -- "nvim-tree.lua" mappings
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
-map("n", "<Leader>e", ":NvimTreeToggle<CR>",  opts)
-map("n", "<Leader>r", ":NvimTreeRefresh<CR>", opts)
+map("n", "<Leader>e",  ":NvimTreeToggle<CR>",  opts)
+map("n", "<Leader>fe", ":NvimTreeFocus<CR>",   opts)
+map("n", "<Leader>r",  ":NvimTreeRefresh<CR>", opts)

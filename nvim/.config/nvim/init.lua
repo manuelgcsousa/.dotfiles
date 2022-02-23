@@ -30,6 +30,7 @@ set.showtabline = 2
 set.cursorline = true
 set.laststatus = 2
 vim.cmd[[set fillchars+=vert:\ ]]
+vim.cmd[[set fillchars=eob:\ ]]
 set.showmode = false
 set.swapfile = false
 set.errorbells = false 
