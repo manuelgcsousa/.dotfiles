@@ -29,8 +29,8 @@ set.viminfo = ""
 set.showtabline = 2
 set.cursorline = true
 set.laststatus = 2
-vim.cmd[[set fillchars+=vert:\ ]]
-vim.cmd[[set fillchars=eob:\ ]]
+vim.cmd[[set fillchars+=vert:\┃]]
+vim.cmd[[set fillchars+=eob:\ ]]
 set.showmode = false
 set.swapfile = false
 set.errorbells = false 
@@ -41,14 +41,14 @@ set.termguicolors = true
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
-map("n", "<Leader>w", ":w<CR><Space><Left>", opts) -- quick save
-map("n", "<Leader>c", ":noh<CR>",            opts) -- clean search highlight
+map("n", "<Leader>w",  ":w<CR><Space><Left>", opts) -- quick save
+map("n", "<Leader>fq", ":bdelete!<CR>",       opts) -- force buffer quit
+map("n", "<Leader>c",  ":noh<CR>",            opts) -- clean search highlight
 
 map("v", "<C-c>", "\"+yi",      { silent = true }) -- Ctrl-c
 map("i", "<C-v>", "<ESC>\"+pa", { silent = true }) -- Ctrl-v
-
-map("v", "<", "<gv", { silent = true })
-map("v", ">", ">gv", { silent = true })
+map("v", "<",     "<gv",        { silent = true }) -- shift left 
+map("v", ">",     ">gv",        { silent = true }) -- shift right
 
 
 -- plugins & configs

@@ -14,10 +14,10 @@ require("nvim-tree").setup{
     }
 }
 
--- disable status line
+-- disable status line within filetree buffer
 vim.cmd[[
 function! DisableST()
-    return " "
+    return " * FileTree * "
 endfunction
 au BufEnter NvimTree setlocal statusline=%!DisableST()
 ]]
