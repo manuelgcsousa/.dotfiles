@@ -29,4 +29,5 @@ return packer.startup(function(use)
     use "onsails/lspkind-nvim"
     use "romgrk/barbar.nvim"
     use "tpope/vim-surround"
+    use "jiangmiao/auto-pairs"
 end)

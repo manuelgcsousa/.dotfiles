@@ -14,6 +14,14 @@ require("nvim-tree").setup{
     }
 }
 
+-- disable status line
+vim.cmd[[
+function! DisableST()
+    return " "
+endfunction
+au BufEnter NvimTree setlocal statusline=%!DisableST()
+]]
+
 -- "nvim-tree.lua" mappings
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }

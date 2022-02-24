@@ -32,7 +32,7 @@ cmp.setup{
             elseif check_backspace() then
                 fallback()
             else
-                --callback()
+                fallback()
             end
         end, {
             "i",
@@ -64,7 +64,15 @@ cmp.setup{
         { name = "nvim_lsp" },
         { name = "luasnip" },
         { name = "buffer" }
-    }
+    },
+
+    documentation = {
+        border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+    },
+
+    experimental = {
+        ghost_text = true,
+    },
 }
 
 
