@@ -1,10 +1,8 @@
--- lsp.lua --
+-- completion.lua --
 
 local cmp     = require("cmp")
 local luasnip = require("luasnip")
 local lspkind = require("lspkind")
-local lsp     = require("lspconfig")
-local null_ls = require("null-ls")
 
 local check_backspace = function()
     local col = vim.fn.col "." - 1
@@ -74,34 +72,3 @@ cmp.setup{
         ghost_text = true,
     },
 }
-
-
--- "nvim-lsp" mappings
-local on_attach = function(client)
-    local map = vim.api.nvim_set_keymap
-    local opts = { noremap = true, silent = true }
-    
-    map("n", "<Leader>d", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-    --map("n", "<Leader>g", "<cmd>lua vim.lsp.buf.definition()<CR>",  opts)
-    map("n", "<Leader>h", "<cmd>lua vim.lsp.buf.hover()<CR>",       opts)
-end
-
--- "nvim-lsp" setup
-lsp.pyright.setup{ -- Python
-    on_attach = on_attach,
-    settings = {
-        python = {
-            analysis = {
-                typeCheckingMode = "basic"
-            }
-        }
-    }
-} 
-
-
--- "null-ls" setup
-null_ls.setup({
-    sources = {
-        null_ls.builtins.diagnostics.pylama,
-    },
-})

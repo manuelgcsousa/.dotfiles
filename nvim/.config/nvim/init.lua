@@ -37,23 +37,10 @@ set.errorbells = false
 set.termguicolors = true
 
 
--- mappings
-local map = vim.api.nvim_set_keymap
-local opts = { noremap = true, silent = true }
-
-map("n", "<Leader>w",  ":w<CR><Space><Left>", opts) -- quick save
-map("n", "<Leader>fq", ":bdelete!<CR>",       opts) -- force buffer quit
-map("n", "<Leader>c",  ":noh<CR>",            opts) -- clean search highlight
-
-map("v", "<C-c>", "\"+yi",      { silent = true }) -- Ctrl-c
-map("i", "<C-v>", "<ESC>\"+pa", { silent = true }) -- Ctrl-v
-map("v", "<",     "<gv",        { silent = true }) -- shift left 
-map("v", ">",     ">gv",        { silent = true }) -- shift right
-
-
 -- plugins & configs
 require("plugins")
+require("mappings")
 require("colorscheme")
+require("status")
 require("filetree")
 require("lsp")
-require("status")
