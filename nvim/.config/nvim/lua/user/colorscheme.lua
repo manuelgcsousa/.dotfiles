@@ -4,8 +4,11 @@ vim.cmd[[
 colorscheme codedark
 set background=dark
 
-hi Normal      ctermbg=234 guibg=#1c1c1c
-hi VertSplit   ctermbg=234 guibg=#1c1c1c
-hi LineNr      ctermbg=234 guibg=#1c1c1c
-hi EndOfBuffer ctermbg=234 guibg=#1c1c1c
+hi Normal              guibg=#1C1C1C
+hi VertSplit           guibg=#1C1C1C
+hi LineNr              guibg=#1C1C1C
+hi EndOfBuffer         guibg=#1C1C1C
+hi BufferInactive      guibg=#252526 guifg=#666666 
+hi BufferInactiveIndex               guifg=#666666
+hi BufferCurrentSign                 guifg=#68AFE9
 ]]
