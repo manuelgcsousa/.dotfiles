@@ -2,21 +2,19 @@
 
 local packer = require("packer")
 
--- "packer.nvim" popup window
+-- popup window
 packer.init {
-  display = {
-    open_fn = function()
-      return require("packer.util").float { border = "rounded" }
-    end,
-  },
+    display = {
+        open_fn = function()
+            return require("packer.util").float { border = "rounded" }
+        end,
+    },
 }
 
--- "packer.nvim" plugins
 return packer.startup(function(use)
     use "wbthomason/packer.nvim"
     use "L3MON4D3/LuaSnip"
     use "fladson/vim-kitty"
-    use "folke/which-key.nvim"
     use "hrsh7th/cmp-buffer"
     use "hrsh7th/cmp-nvim-lsp"
     use "hrsh7th/nvim-cmp"

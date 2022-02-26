@@ -2,7 +2,6 @@
 
 local lsp = require("lspconfig")
 
--- "nvim-lsp" mappings
 local on_attach = function(client)
     local map = vim.api.nvim_set_keymap
     local opts = { noremap = true, silent = true }
@@ -11,8 +10,8 @@ local on_attach = function(client)
     load_lsp_mappings()
 end
 
--- "nvim-lsp" setup
-lsp.pyright.setup{ -- Python
+-- Python
+lsp.pyright.setup{
     on_attach = on_attach,
     settings = {
         python = {

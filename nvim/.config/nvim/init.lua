@@ -1,7 +1,6 @@
 -- init.lua --
 vim.g.mapleader = ","
 
-
 -- defaults
 local set = vim.opt
 set.syntax = "on" 
@@ -36,11 +35,10 @@ set.swapfile = false
 set.errorbells = false 
 set.termguicolors = true
 
-
 -- plugins & configs
-require("plugins")
-require("mappings")
-require("colorscheme")
-require("status")
-require("filetree")
-require("lsp")
+require("user.plugins")
+require("user.mappings")
+require("user.colorscheme")
+require("user.lualine")
+require("user.nvim-tree")
+require("user.LSP")

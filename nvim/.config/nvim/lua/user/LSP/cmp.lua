@@ -1,4 +1,4 @@
--- completion.lua --
+-- cmp.lua --
 
 local cmp     = require("cmp")
 local luasnip = require("luasnip")
@@ -9,7 +9,6 @@ local check_backspace = function()
     return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
 end
 
--- "nvim-cmp" setup
 cmp.setup{
     snippet = {
       expand = function(args)

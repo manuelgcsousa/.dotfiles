@@ -12,7 +12,7 @@ map("i", "<C-v>",      "<ESC>\"+pa",          { silent = true }) -- Ctrl-v
 map("v", "<",          "<gv",                 { silent = true }) -- shift left 
 map("v", ">",          ">gv",                 { silent = true }) -- shift right
 
--- "barbar.nvim" mappings
+-- "barbar.nvim"
 map("n", "<S-Tab>",           ":BufferPrevious<CR>",     opts)
 map("n", "<Tab>",             ":BufferNext<CR>",         opts)
 map("n", "<Leader>q",         ":BufferClose<CR>",        opts)
@@ -28,12 +28,12 @@ map("n", "<Leader>9",         ":BufferGoto 9<CR>",       opts)
 map("n", "<Leader><S-Left>",  ":BufferMovePrevious<CR>", opts)
 map("n", "<Leader><S-Right>", ":BufferMoveNext<CR>",     opts)
 
--- "nvim-tree.lua" mappings
+-- "nvim-tree.lua"
 map("n", "<Leader>e",  ":NvimTreeToggle<CR>",  opts)
 map("n", "<Leader>fe", ":NvimTreeFocus<CR>",   opts)
 map("n", "<Leader>r",  ":NvimTreeRefresh<CR>", opts)
 
--- "lsp" mappings
+-- neovim lsp
 function load_lsp_mappings()
     map("n", "<Leader>d",  "<cmd>lua vim.lsp.buf.declaration()<CR>",   opts)
   --map("n", "<Leader>g",  "<cmd>lua vim.lsp.buf.definition()<CR>",    opts)

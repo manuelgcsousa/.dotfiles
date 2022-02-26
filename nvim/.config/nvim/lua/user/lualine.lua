@@ -1,16 +1,5 @@
--- status.lua --
+-- lualine.lua --
 
--- "barbar.nvim" configs
-vim.g.bufferline = {
-    animation = false,
-    auto_hide = false,
-    tabpages = true,
-    closable = true,
-    clickable = true
-}
-
-
--- "lualine.nvim" setup
 require("lualine").setup{
     options = {
         icons_enabled = true,
