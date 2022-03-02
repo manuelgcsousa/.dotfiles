@@ -1,4 +1,4 @@
-require("user.LSP.cmp")
-require("user.LSP.lspconfig")
+require("user.LSP.handlers").setup()
 require("user.LSP.null-ls")
-require("user.LSP.diagnostics").setup()
+require("user.LSP.lspconfig")
+require("user.LSP.cmp")

@@ -1,18 +1,11 @@
-local diagnostics = {
-    Error = "",
-    Warning = "",
-    Information = "",
-    Question = "",
-    Hint = "",
-}
-
 local M = {}
+
 M.setup = function()
   local signs = {
-    { name = "DiagnosticSignError", text = diagnostics.Error },
-    { name = "DiagnosticSignWarn",  text = diagnostics.Warning },
-    { name = "DiagnosticSignHint",  text = diagnostics.Hint },
-    { name = "DiagnosticSignInfo",  text = diagnostics.Information },
+    { name = "DiagnosticSignError", text = "" },
+    { name = "DiagnosticSignWarn", text = "" },
+    { name = "DiagnosticSignHint", text = "" },
+    { name = "DiagnosticSignInfo", text = "" },
   }
 
   for _, sign in ipairs(signs) do
@@ -30,15 +23,23 @@ M.setup = function()
     underline = true,
     severity_sort = true,
     float = {
-      focusable = true,
+      focusable = false,
       style = "minimal",
-      --border = "rounded",
+      border = "rounded",
       source = "always",
       header = "",
       prefix = "",
     },
   }
   vim.diagnostic.config(config)
+
+  vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+    border = "rounded",
+  })
+
+  vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
+    border = "rounded",
+  })
 end
 
 return M

@@ -30,4 +30,8 @@ return packer.startup(function(use)
     use "romgrk/barbar.nvim"
     use "tomasiser/vim-code-dark"
     use "tpope/vim-surround"
+    use {
+        "nvim-treesitter/nvim-treesitter",
+        run = ":TSUpdate"
+    }
 end)

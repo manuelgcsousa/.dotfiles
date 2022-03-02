@@ -7,6 +7,7 @@ set.syntax = "on"
 set.mouse = "a"
 set.encoding = "utf8"
 set.ffs = { "unix", "dos", "mac" }
+set.clipboard = "unnamedplus"
 set.hidden = true
 set.number = true
 set.relativenumber = true
@@ -23,7 +24,7 @@ set.splitbelow = true
 set.ruler = true
 set.wildmenu = true
 set.completeopt = { "menuone", "noselect" }
-set.signcolumn = "no"
+set.signcolumn = "auto"
 set.viminfo = ""
 set.showtabline = 2
 set.cursorline = true
@@ -39,6 +40,7 @@ set.termguicolors = true
 require("user.plugins")
 require("user.mappings")
 require("user.colorscheme")
+require("user.treesitter")
 require("user.lualine")
 require("user.nvim-tree")
 require("user.LSP")
