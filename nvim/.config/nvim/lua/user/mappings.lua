@@ -33,6 +33,10 @@ map("n", "<Leader>e",  ":NvimTreeToggle<CR>",  opts)
 map("n", "<Leader>fe", ":NvimTreeFocus<CR>",   opts)
 map("n", "<Leader>r",  ":NvimTreeRefresh<CR>", opts)
 
+-- "telescope.nvim"
+map("n", "<Leader>ff", "<cmd>lua require('telescope.builtin').find_files()<CR>", opts)
+map("n", "<Leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<CR>",  opts)
+
 -- neovim lsp
 function load_lsp_mappings()
     map("n", "<Leader>d",  "<cmd>lua vim.lsp.buf.declaration()<CR>",   opts)

@@ -14,6 +14,7 @@ packer.init {
 return packer.startup(function(use)
     use "wbthomason/packer.nvim"
     use "L3MON4D3/LuaSnip"
+    use "akinsho/toggleterm.nvim"
     use "fladson/vim-kitty"
     use "hrsh7th/cmp-buffer"
     use "hrsh7th/cmp-nvim-lsp"
@@ -33,5 +34,9 @@ return packer.startup(function(use)
     use {
         "nvim-treesitter/nvim-treesitter",
         run = ":TSUpdate"
+    }
+    use {
+        "nvim-telescope/telescope.nvim",
+        requires = { {"nvim-lua/plenary.nvim"} }
     }
 end)
