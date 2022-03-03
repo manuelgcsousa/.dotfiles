@@ -6,6 +6,7 @@ PKGS=(
     "font-jetbrains-mono-nerd-font"
     "jq"
     "kitty"
+    "github.com/k0nserv/kitty-icon"
     "node"
     "nvim"
     "packer.nvim"
