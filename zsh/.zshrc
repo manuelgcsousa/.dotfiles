@@ -10,12 +10,12 @@ export LANG=pt_PT.UTF-8
 
 # prompts
 export PROMPT=$'\n%F{8}[%~]%f $ '
-export PROMPTBK=$PROMPT
 
 # add git branch to prompt
 function parse_git_branch() { git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/(\1) /p' }
 setopt PROMPT_SUBST
 export PROMPT=$'\n%F{8}[%~]%f %F{green}$(parse_git_branch)%f$ '
+export PROMPTBK=$PROMPT
 
 # ls colors (macOS)
 export CLICOLOR=1
@@ -25,9 +25,14 @@ export LSCOLORS=GxBxfxdxCxegedabagaced
 export PATH="$PATH:$HOME/.scripts"
 # ...
 
+# history
+bindkey -v
+bindkey "^R" history-incremental-search-backward
+
 # vi mode
 bindkey -v
 export KEYTIMEOUT=1
+bindkey "^?" backward-delete-char
 
 # autocomplete
 autoload -U compinit && compinit
