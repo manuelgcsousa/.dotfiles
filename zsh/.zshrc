@@ -12,9 +12,12 @@ export LANG=pt_PT.UTF-8
 export PROMPT=$'\n%F{8}[%~]%f $ '
 
 # add git branch to prompt
-function parse_git_branch() { git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/(\1) /p' }
+function parse_git_branch() {
+    branch=$(git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/\1 /p')
+    [ $branch ] && echo "on %F{green}$branch%f"
+}
 setopt PROMPT_SUBST
-export PROMPT=$'\n%F{8}[%~]%f %F{green}$(parse_git_branch)%f$ '
+export PROMPT=$'\n%n in %F{8}%~%f $(parse_git_branch)\n$ '
 export PROMPTBK=$PROMPT
 
 # ls colors (macOS)
