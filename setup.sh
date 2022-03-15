@@ -4,15 +4,19 @@ PKGS=(
     "homebrew"
     "bat"
     "font-jetbrains-mono-nerd-font"
+    "github.com/k0nserv/kitty-icon"
     "jq"
     "kitty"
-    "github.com/k0nserv/kitty-icon"
     "node"
     "nvim"
     "packer.nvim"
     "rectangle"
+    "spaceman"
     "vscode"
 )
+
+# setup .zshenv
+echo ". ~/.config/zsh/.zshenv" > ~/.zshenv
 
 # link with GNU stow.
 stow -v kitty nvim zsh
