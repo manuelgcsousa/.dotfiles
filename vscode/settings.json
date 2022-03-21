@@ -1,7 +1,7 @@
 {
     "workbench.startupEditor": "none",
-    "workbench.colorTheme": "Default Dark+",
     "workbench.sideBar.location": "right",
+    "workbench.colorTheme": "Default Dark+",
     "editor.minimap.enabled": false,
     "workbench.iconTheme": "material-icon-theme",
     "editor.cursorBlinking": "solid",
@@ -36,5 +36,5 @@
             "before": ["<"],
             "commands": ["editor.action.outdentLines"]
         }
-    ]
+    ],
 }
