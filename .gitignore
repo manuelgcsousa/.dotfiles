@@ -2,4 +2,5 @@
 .zcompdump
 .zsh_history
 .zsh_sessions/
+.zcompcache/
 nvim/.config/nvim/plugin/
