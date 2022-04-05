@@ -1,0 +1,25 @@
+#!/bin/sh
+
+chosen=$(printf "  Power Off\n  Restart\n  Lock\n  Logout" | rofi -dmenu -i -theme-str '@import "power.rasi"')
+
+case "$chosen" in
+	"  Power Off")
+        poweroff
+        ;;
+
+	"  Restart")
+        reboot
+        ;;
+
+	"  Lock")
+        i3lock -c 1c1c1c
+        ;;
+
+	"  Logout")
+        bspc quit
+        ;;
+	
+    *)
+        exit 1
+        ;;
+esac
