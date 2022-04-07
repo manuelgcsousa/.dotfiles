@@ -1,5 +1,7 @@
 #!/bin/bash
 
+WMDIR="$HOME/.config/bspwm"
+
 # startup
 sxhkd -c $WMDIR/sxhkd/sxhkdrc &  # keychords
 nm-applet &                      # network-manager applet
