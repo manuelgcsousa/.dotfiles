@@ -1,0 +1,27 @@
+#!/usr/bin/bash
+
+MAIN="eDP-1"
+EXTERNAL1="DP-1"  # office
+EXTERNAL2="DP-2"  # home
+
+if [[ $(xrandr -q | grep "^$EXTERNAL2 connected") ]]; then
+    xrandr \
+        --output $MAIN --mode 3840x2160 --pos 3883x0 --rotate normal \
+        --output $EXTERNAL2 --primary --mode 1920x1080 --pos 0x0 --rotate normal --scale 2x2
+        
+    bspc monitor $EXTERNAL2 -d '1' '2' '3' '4' '5' '6'
+    bspc monitor $MAIN      -d '7' '8'
+
+    $HOME/.config/bspwm/polybar/launch-polybar &
+elif [[ $(xrandr -q | grep "^$EXTERNAL1 connected") ]]; then
+    xrandr --output $EXTERNAL1 --scale 2x2
+
+    bspc monitor $MAIN      -d '1' '2' '3' '4' '5' '6'
+    bspc monitor $EXTERNAL1 -d '7' '8'
+
+    $HOME/.config/bspwm/polybar/launch-polybar &
+else
+    bspc monitor $MAIN -d '1' '2' '3' '4' '5' '6' '7' '8'
+
+    $HOME/.config/bspwm/polybar/launch-polybar &
+fi

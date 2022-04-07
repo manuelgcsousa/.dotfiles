@@ -12,7 +12,7 @@ case "$chosen" in
         ;;
 
 	"  Lock")
-        i3lock -c 1c1c1c
+        i3lock -c 1C1C1C
         ;;
 
 	"  Logout")

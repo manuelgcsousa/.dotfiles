@@ -8,6 +8,8 @@ PROMPT=$'\n%n in %F{8}%~%f $(parse_git_branch)\n$ '
 export PROMPTBK=$PROMPT
 
 # history
+SAVEHIST=10000
+HISTFILE="$ZDOTDIR/.zsh_history"
 bindkey -v
 bindkey "^R" history-incremental-search-backward
 
@@ -23,11 +25,11 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
 # terraform completion
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/local/bin/terraform terraform
+complete -o nospace -C /usr/bin/terraform terraform
 
 # aliases
 alias \
-	ls="ls --color=auto" \
+	ls="ls -v --color" \
 	..="cd ../" \
 	cp="cp -iv" \
 	rm="rm -i" \
@@ -36,8 +38,7 @@ alias \
 	grep="grep --color=auto"
 
 alias vim="nvim"
-alias cat="bat --theme=\"Visual Studio Dark+\""
-eval $(thefuck --alias)
+alias cat="bat --theme=\"TwoDark\""
 
 # functions
 function mktar() { tar cvzf "${1%%/}.tar.gz" "${1%%/}/"; }

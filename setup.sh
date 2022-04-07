@@ -1,26 +1,10 @@
 #!/bin/bash
 
-PKGS=(
-    "homebrew"
-    "bat"
-    "font-jetbrains-mono-nerd-font"
-    "github.com/k0nserv/kitty-icon"
-    "jq"
-    "kitty"
-    "node"
-    "nvim"
-    "packer.nvim"
-    "rectangle"
-    "spaceman"
-    "stow"
-    "vscode"
-)
-
 # setup .zshenv
 echo ". ~/.config/zsh/.zshenv" > ~/.zshenv
 
 # link with GNU stow.
-stow -v kitty nvim zsh
+stow -v bspwm dunst kitty nvim rofi zsh
 
 # manually link vscode settings.
 [[ $(uname -s) == "Linux" ]] && \

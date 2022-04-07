@@ -6,7 +6,7 @@ super + Return
 super + @space
     rofi -modi drun,run -show drun -show-icons
 
-# make sxhkd reload its configuration files:
+# make sxhkd reload its configuration files
 super + Escape
 	pkill -USR1 -x sxhkd
 
@@ -52,4 +52,16 @@ XF86AudioRaiseVolume
 XF86AudioLowerVolume
     amixer set 'Master' 5%- 1>/dev/null
 XF86AudioMute
-    amixer-toggle-sound
+    amixer -D pulse set 'Master' 1+ toggle 1>/dev/null
+
+# brightness keys
+XF86MonBrightnessUp
+    brillo -q -A 2
+XF86MonBrightnessDown
+    brillo -q -U 2
+
+# disable page-up and page-down
+Prior
+    true
+Next
+    true
