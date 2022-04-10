@@ -6,7 +6,8 @@ WMDIR="$HOME/.config/bspwm"
 sxhkd -c $WMDIR/sxhkd/sxhkdrc &  # keychords
 nm-applet &                      # network-manager applet
 picom &                          # compositor
-echo 'Xft.dpi: 200' | xrdb       # scaling for 4k monitor
+dunst &                          # notification daemon
+echo "Xft.dpi: 200" | xrdb       # scaling for 4k monitor
 $HOME/.fehbg                     # set background with feh
 
 # bspwm settings
@@ -18,4 +19,4 @@ bspc config gapless_monocle      true
 bspc config normal_border_color  "#4C566A"
 bspc config focused_border_color "#0D73CC"
 
-bspc rule -a zoom desktop='^7'
+bspc rule -a zoom desktop="^7"
