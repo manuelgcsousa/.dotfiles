@@ -21,7 +21,7 @@ def _create_cells() -> list[str]:
     return [
         " " + now.strftime("%a %d %b"),
         " " + now.strftime("%H:%M"),
-        " "
+        " "
     ]
 
 
