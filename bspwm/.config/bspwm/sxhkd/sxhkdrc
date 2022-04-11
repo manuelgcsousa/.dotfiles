@@ -18,6 +18,10 @@ super + alt + {q,r}
 super + shift + e
     powermenu
 
+# setup desktop
+super + shift + b
+    desktop-bootstrap
+
 # close and kill
 super + shift + {q,k}
 	bspc node -{c,k}
