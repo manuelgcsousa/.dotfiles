@@ -26,4 +26,6 @@ if [[ ! $(ps -e | grep polybar) ]]; then
 
         $HOME/.config/bspwm/polybar/launch-polybar &
     fi
+else
+    notify-send --urgency=critical --expire-time=2000 "Desktop bootstrap already done!"
 fi
