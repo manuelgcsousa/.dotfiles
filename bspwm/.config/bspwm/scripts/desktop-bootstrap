@@ -26,6 +26,8 @@ if [[ ! $(ps -e | grep polybar) ]]; then
 
         $HOME/.config/bspwm/polybar/launch-polybar &
     fi
+
+    $HOME/.fehbg  # reset background with feh
 else
     notify-send --urgency=critical --expire-time=2000 "Desktop bootstrap already done!"
 fi

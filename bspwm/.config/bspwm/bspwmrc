@@ -4,10 +4,10 @@ WMDIR="$HOME/.config/bspwm"
 
 # startup
 sxhkd -c $WMDIR/sxhkd/sxhkdrc &  # keychords
-nm-applet &                      # network-manager applet
+echo "Xft.dpi: 200" | xrdb &     # scaling for 4k monitor
 picom &                          # compositor
+nm-applet &                      # network-manager applet
 dunst &                          # notification daemon
-echo "Xft.dpi: 200" | xrdb       # scaling for 4k monitor
 $HOME/.fehbg                     # set background with feh
 
 # bspwm settings
