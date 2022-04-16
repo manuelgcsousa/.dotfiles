@@ -24,6 +24,7 @@ fi
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.config/bspwm/scripts"
 export PATH="$PATH:$HOME/.scripts"
+export PATH="$PATH:/opt/confd/bin"
 
 # ... nix
 export XDG_DATA_DIRS="$XDG_DATA_DIRS:$HOME/.nix-profile/share"

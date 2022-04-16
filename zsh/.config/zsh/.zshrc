@@ -8,8 +8,9 @@ PROMPT=$'\n%n in %F{8}%~%f $(parse_git_branch)\n$ '
 export PROMPTBK=$PROMPT
 
 # history
+HISTSIZE=10000
 SAVEHIST=10000
-HISTFILE="$ZDOTDIR/.zsh_history"
+HISTFILE="$HOME/.cache/zsh/history"
 bindkey -v
 bindkey "^R" history-incremental-search-backward
 
