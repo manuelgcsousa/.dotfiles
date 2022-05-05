@@ -21,3 +21,8 @@ lsp.pyright.setup{
         }
     }
 }
+
+-- Golang
+lsp.gopls.setup{
+    on_attach = on_attach
+}

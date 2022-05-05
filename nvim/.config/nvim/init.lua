@@ -28,7 +28,7 @@ set.signcolumn = "auto"
 set.viminfo = ""
 set.showtabline = 2
 set.cursorline = true
-set.laststatus = 2
+set.laststatus = 3
 vim.cmd[[set fillchars+=vert:\┃]]
 vim.cmd[[set fillchars+=eob:\ ]]
 set.showmode = false
@@ -37,13 +37,13 @@ set.errorbells = false
 set.termguicolors = true
 
 -- plugins & configs
-require("user.plugins")
-require("user.mappings")
-require("user.colorscheme")
-require("user.treesitter")
-require("user.barbar")
-require("user.lualine")
-require("user.nvim-tree")
-require("user.telescope")
-require("user.toggleterm")
-require("user.LSP")
+require("plugins")
+require("mappings")
+require("colorscheme")
+require("config.treesitter")
+require("config.barbar")
+require("config.lualine")
+require("config.nvim-tree")
+require("config.telescope")
+require("config.toggleterm")
+require("config.LSP")

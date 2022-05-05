@@ -63,8 +63,10 @@ cmp.setup{
         { name = "buffer" }
     },
 
-    documentation = {
-        border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+    window = {
+        documentation = {
+            border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+        }
     },
 
     experimental = {
