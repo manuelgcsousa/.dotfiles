@@ -36,6 +36,14 @@ set.swapfile = false
 set.errorbells = false 
 set.termguicolors = true
 
+-- indentation by filetype
+vim.cmd[[
+autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType lua setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType typescript setlocal shiftwidth=2 tabstop=2 softtabstop=2
+]]
+
 -- plugins & configs
 require("plugins")
 require("mappings")

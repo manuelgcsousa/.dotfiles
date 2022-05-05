@@ -6,7 +6,7 @@ local opts = { noremap = true, silent = true }
 -- defaults
 map("n", "<Leader>w",  ":w<CR><Space><Left>", opts)              -- quick save
 map("n", "<Leader>fq", ":bdelete!<CR>",       opts)              -- force buffer quit
-map("n", "<Leader>c",  ":noh<CR>",            opts)              -- clean search highlight
+map("n", "<Leader>c",  ":noh<CR>",            opts)              -- clear search highlight
 map("v", "<C-c>",      "\"+yi",               { silent = true }) -- Ctrl-c
 map("i", "<C-v>",      "<ESC>\"+pa",          { silent = true }) -- Ctrl-v
 map("v", "<",          "<gv",                 { silent = true }) -- shift left 
@@ -23,19 +23,18 @@ map("n", "<Leader>4",         ":BufferGoto 4<CR>",       opts)
 map("n", "<Leader>5",         ":BufferGoto 5<CR>",       opts)
 map("n", "<Leader>6",         ":BufferGoto 6<CR>",       opts)
 map("n", "<Leader>7",         ":BufferGoto 7<CR>",       opts)
-map("n", "<Leader>8",         ":BufferGoto 8<CR>",       opts)
+map("n", "<Leader>7",         ":BufferGoto 8<CR>",       opts)
 map("n", "<Leader>9",         ":BufferGoto 9<CR>",       opts)
 map("n", "<Leader><S-Left>",  ":BufferMovePrevious<CR>", opts)
 map("n", "<Leader><S-Right>", ":BufferMoveNext<CR>",     opts)
 
 -- "nvim-tree.lua"
-map("n", "<Leader>e",  ":NvimTreeToggle<CR>",  opts)
-map("n", "<Leader>fe", ":NvimTreeFocus<CR>",   opts)
-map("n", "<Leader>r",  ":NvimTreeRefresh<CR>", opts)
+map("n", "<C-e>",     ":NvimTreeToggle<CR>",  opts)
+map("n", "<Leader>r", ":NvimTreeRefresh<CR>", opts)
 
 -- "telescope.nvim"
-map("n", "<Leader>ff", "<cmd>lua require('telescope.builtin').find_files()<CR>", opts)
-map("n", "<Leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<CR>",  opts)
+map("n", "<C-f>", "<cmd>lua require('telescope.builtin').find_files()<CR>", opts)
+map("n", "<C-g>", "<cmd>lua require('telescope.builtin').live_grep()<CR>",  opts)
 
 -- "toggleterm.nvim"
 map("n", "<Leader>tt", ":ToggleTerm<CR>", opts)
