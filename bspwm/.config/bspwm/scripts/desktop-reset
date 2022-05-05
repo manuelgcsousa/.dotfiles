@@ -1,0 +1,37 @@
+#!/usr/bin/bash
+
+MAIN="eDP-1"
+EXTERNALS=("DP-1" "HDMI-1" "DP-2" "HDMI-2" "DP-3" "HDMI-3")
+
+if [ $(xrandr -q | grep " connected" | wc -l) -gt 1 ]; then
+    # moves all desktops from all external monitors to laptop monitor
+    for monitor in $EXTERNALS
+    do
+        bspwm_desktops=$(bspc query -D -m $monitor)
+        if [[ ! $(echo $bspwm_monitors | grep "Invalid") ]]; then
+            for desktop in $bspwm_monitors
+            do
+                bspc desktop $desktop --to-monitor $MAIN
+            done
+        fi
+
+        # removes all external monitors from bspwm
+        bspc monitor $monitor --remove > /dev/null
+    done
+
+    # update display config
+    xrandr \
+        --output eDP-1 --primary --mode 3840x2160 --pos 0x0 --rotate normal \
+        --output DP-1 --off \
+        --output HDMI-1 --off \
+        --output DP-2 --off \
+        --output HDMI-2 --off \
+        --output DP-3 --off \
+        --output HDMI-3 --off
+
+    # give all desktops to main monitor and reset polybar 
+    bspc monitor $MAIN -d '1' '2' '3' '4' '5' '6' '7' '8' '9'
+    $HOME/.config/bspwm/polybar/launch-polybar &
+else
+    notify-send --urgency=critical --expire-time=2000 "All desktops already moved to laptop!"
+fi

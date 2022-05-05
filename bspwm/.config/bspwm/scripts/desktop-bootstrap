@@ -4,30 +4,26 @@ MAIN="eDP-1"
 EXTERNAL1="DP-1"  # office
 EXTERNAL2="DP-2"  # home
 
-if [[ ! $(ps -e | grep polybar) ]]; then
+if [[ ! $(ps -e | grep "polybar") ]]; then
     if [[ $(xrandr -q | grep "^$EXTERNAL2 connected") ]]; then
         xrandr \
             --output $MAIN --mode 3840x2160 --pos 3883x0 --rotate normal \
             --output $EXTERNAL2 --primary --mode 1920x1080 --pos 0x0 --rotate normal --scale 2x2
             
-        bspc monitor $EXTERNAL2 -d '1' '2' '3' '4' '5' '6'
-        bspc monitor $MAIN      -d '7' '8'
-
-        $HOME/.config/bspwm/polybar/launch-polybar &
+        bspc monitor $EXTERNAL2 -d '1' '2' '3' '4' '5' '6' '7' '8'
+        bspc monitor $MAIN      -d '9' '10'
     elif [[ $(xrandr -q | grep "^$EXTERNAL1 connected") ]]; then
         xrandr --output $EXTERNAL1 --scale 2x2
 
-        bspc monitor $MAIN      -d '1' '2' '3' '4' '5' '6'
-        bspc monitor $EXTERNAL1 -d '7' '8'
-
-        $HOME/.config/bspwm/polybar/launch-polybar &
+        bspc monitor $MAIN      -d '1' '2' '3' '4' '5' '6' '7' '8'
+        bspc monitor $EXTERNAL1 -d '9' '10'
     else
         bspc monitor $MAIN -d '1' '2' '3' '4' '5' '6' '7' '8'
-
-        $HOME/.config/bspwm/polybar/launch-polybar &
     fi
 
-    $HOME/.fehbg  # reset background with feh
+    # launch polybar and reset background with feh
+    $HOME/.config/bspwm/polybar/launch-polybar &
+    $HOME/.fehbg
 else
     notify-send --urgency=critical --expire-time=2000 "Desktop bootstrap already done!"
 fi

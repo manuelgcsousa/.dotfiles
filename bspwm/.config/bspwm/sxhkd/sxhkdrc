@@ -64,6 +64,20 @@ XF86MonBrightnessUp
 XF86MonBrightnessDown
     brillo -q -U 2
 
+# media keys
+XF86Audio{Prev,Next}
+	playerctl {previous,next}
+XF86AudioPlay
+	playerctl play-pause
+
+# printscreen
+@Print
+    screenshot
+shift + @Print
+    screenshot select
+control + @Print
+    screenshot window
+
 # disable page-up and page-down
 Prior
     true
