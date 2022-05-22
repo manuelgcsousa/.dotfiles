@@ -31,7 +31,7 @@ set.cursorline = true
 set.laststatus = 3
 vim.cmd[[set fillchars+=vert:\┃]]
 vim.cmd[[set fillchars+=eob:\ ]]
-set.showmode = false
+--set.showmode = false
 set.swapfile = false
 set.errorbells = false 
 set.termguicolors = true
@@ -39,6 +39,8 @@ set.termguicolors = true
 -- indentation by filetype
 vim.cmd[[
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType json setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType terraform setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType lua setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType typescript setlocal shiftwidth=2 tabstop=2 softtabstop=2
