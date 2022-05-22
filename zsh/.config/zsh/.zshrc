@@ -14,7 +14,7 @@ HISTFILE="$HOME/.cache/zsh/history"
 bindkey -v
 bindkey "^R" history-incremental-search-backward
 
-# vi mode
+# vi mode ...
 bindkey -v
 export KEYTIMEOUT=1
 bindkey "^?" backward-delete-char
@@ -43,6 +43,7 @@ alias cat="bat --theme=\"TwoDark\""
 
 # functions
 function mktar() { tar cvzf "${1%%/}.tar.gz" "${1%%/}/"; }
+function untar() { tar xvzf "$1"; }
 function mkzip() { zip -r "${1%%/}.zip" "$1"; }
 
 function set-tab-title() { kitty @ set-tab-title $1 }
