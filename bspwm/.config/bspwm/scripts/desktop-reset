@@ -8,14 +8,15 @@ if [ $(xrandr -q | grep " connected" | wc -l) -gt 1 ]; then
     for monitor in $EXTERNALS
     do
         bspwm_desktops=$(bspc query -D -m $monitor)
-        if [[ ! $(echo $bspwm_monitors | grep "Invalid") ]]; then
-            for desktop in $bspwm_monitors
+        if [[ ! $(echo $bspwm_desktops | grep "Invalid") ]]; then
+            for desktop in $bspwm_desktops
             do
                 bspc desktop $desktop --to-monitor $MAIN
             done
         fi
 
         # removes all external monitors from bspwm
+        # bspc monitor $monitor --remove > /dev/null
         bspc monitor $monitor --remove > /dev/null
     done
 
