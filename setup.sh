@@ -4,7 +4,16 @@
 echo ". ~/.config/zsh/.zshenv" > ~/.zshenv
 
 # link with GNU stow
-stow -v bspwm dunst kitty nvim rofi zsh
+stow -v \
+    alacritty \
+    bspwm \
+    dunst \
+    i3 \
+    kitty \
+    nvim \
+    rofi \
+    tmux \
+    zsh
 
 # manually link vscode settings
 [[ $(uname -s) == "Linux" ]] && \
