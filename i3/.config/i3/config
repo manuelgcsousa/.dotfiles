@@ -105,10 +105,14 @@ bindsym $mod+r mode "resize"
 # split in horizontal orientation \
 # split in vertical orientation \
 # enter fullscreen mode for the focused container \
+# use tabbed layout \
+# use default layout \
 # toggle tiling/floating
 bindsym $mod+h split h
 bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
+bindsym $mod+t layout tabbed
+bindsym $mod+d layout default
 bindsym $mod+Shift+space floating toggle
 
 # switch to workspace
