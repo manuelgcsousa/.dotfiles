@@ -1,11 +1,9 @@
--- colorscheme.lua --
-
 vim.cmd[[
 colorscheme codedark
 set background=dark
 
 hi Normal              guibg=#1C1C1C
-hi NormalFloat         guibg=#1C1C1C
+" hi NormalFloat         guibg=#1C1C1C
 hi VertSplit           guibg=#1C1C1C
 hi LineNr              guibg=#1C1C1C
 hi SignColumn          guibg=#1C1C1C

@@ -1,10 +1,5 @@
--- telescope.lua --
-
-local telescope = require("telescope")
-
-telescope.setup{
+require("telescope").setup{
   defaults = {
-    selection_caret = "  ",
     path_display = { "smart" }
   },
   pickers = {

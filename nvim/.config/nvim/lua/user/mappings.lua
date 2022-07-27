@@ -1,7 +1,7 @@
--- mappings.lua --
-
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
+
+vim.g.mapleader = ","
 
 -- defaults
 map("n", "<Leader>w",  ":w<CR><Space><Left>", opts)              -- quick save
@@ -12,7 +12,7 @@ map("i", "<C-v>",      "<ESC>\"+pa",          { silent = true }) -- Ctrl-v
 map("v", "<",          "<gv",                 { silent = true }) -- shift left 
 map("v", ">",          ">gv",                 { silent = true }) -- shift right
 
--- "barbar.nvim"
+-- barbar
 map("n", "<S-Tab>",           ":BufferPrevious<CR>",     opts)
 map("n", "<Tab>",             ":BufferNext<CR>",         opts)
 map("n", "<Leader>q",         ":BufferClose<CR>",        opts)
@@ -28,16 +28,13 @@ map("n", "<Leader>9",         ":BufferGoto 9<CR>",       opts)
 map("n", "<Leader><S-Left>",  ":BufferMovePrevious<CR>", opts)
 map("n", "<Leader><S-Right>", ":BufferMoveNext<CR>",     opts)
 
--- "nvim-tree.lua"
+-- nvim-tree
 map("n", "<C-e>",     ":NvimTreeToggle<CR>",  opts)
 map("n", "<Leader>r", ":NvimTreeRefresh<CR>", opts)
 
--- "telescope.nvim"
+-- telescope
 map("n", "<C-f>", "<cmd>lua require('telescope.builtin').find_files()<CR>", opts)
 map("n", "<C-g>", "<cmd>lua require('telescope.builtin').live_grep()<CR>",  opts)
-
--- "toggleterm.nvim"
-map("n", "<Leader>tt", ":ToggleTerm<CR>", opts)
 
 -- neovim lsp
 function load_lsp_mappings()
@@ -45,4 +42,9 @@ function load_lsp_mappings()
   --map("n", "<Leader>g",  "<cmd>lua vim.lsp.buf.definition()<CR>",    opts)
     map("n", "<Leader>h",  "<cmd>lua vim.lsp.buf.hover()<CR>",         opts)
     map("n", "<Leader>sd", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
+end
+
+-- gitsigns
+function load_gitsigns_mappings()
+  map("n", "<leader>lb", ":Gitsigns toggle_current_line_blame<CR>", opts)
 end

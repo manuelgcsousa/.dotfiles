@@ -1,6 +1,3 @@
--- lualine.lua --
--- based on doom emacs modeline.
-
 local lualine = require("lualine")
 
 --require("lualine").setup{
