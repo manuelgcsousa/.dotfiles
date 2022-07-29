@@ -4,6 +4,7 @@ require("user.colorscheme")
 require("user.mappings")
 require("user.lsp")
 
+require("user.alpha")
 require("user.barbar")
 require("user.gitsigns")
 require("user.lualine")

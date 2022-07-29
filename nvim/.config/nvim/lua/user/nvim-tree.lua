@@ -6,7 +6,7 @@ require("nvim-tree").setup{
   open_on_tab = false,
   view = {
     width = 45,
-    side = "right",
+    side = "left",
     mappings = {
       custom_only = false,
       list = {

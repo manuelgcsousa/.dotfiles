@@ -16,6 +16,9 @@ return packer.startup(function(use)
   -- core lua dev
   use "nvim-lua/plenary.nvim"
 
+  -- startup
+  use "goolord/alpha-nvim"
+
   -- LSP
   use "neovim/nvim-lspconfig"
   use "jose-elias-alvarez/null-ls.nvim"

@@ -30,7 +30,6 @@ map("n", "<Leader><S-Right>", ":BufferMoveNext<CR>",     opts)
 
 -- nvim-tree
 map("n", "<C-e>",     ":NvimTreeToggle<CR>",  opts)
-map("n", "<Leader>r", ":NvimTreeRefresh<CR>", opts)
 
 -- telescope
 map("n", "<C-f>", "<cmd>lua require('telescope.builtin').find_files()<CR>", opts)
@@ -39,7 +38,7 @@ map("n", "<C-g>", "<cmd>lua require('telescope.builtin').live_grep()<CR>",  opts
 -- neovim lsp
 function load_lsp_mappings()
     map("n", "<Leader>d",  "<cmd>lua vim.lsp.buf.declaration()<CR>",   opts)
-  --map("n", "<Leader>g",  "<cmd>lua vim.lsp.buf.definition()<CR>",    opts)
+    map("n", "<Leader>r",  ":Telescope lsp_references<CR>",            opts)
     map("n", "<Leader>h",  "<cmd>lua vim.lsp.buf.hover()<CR>",         opts)
     map("n", "<Leader>sd", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
 end
