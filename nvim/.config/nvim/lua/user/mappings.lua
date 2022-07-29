@@ -4,13 +4,13 @@ local opts = { noremap = true, silent = true }
 vim.g.mapleader = ","
 
 -- defaults
-map("n", "<Leader>w",  ":w<CR><Space><Left>", opts)              -- quick save
-map("n", "<Leader>fq", ":bdelete!<CR>",       opts)              -- force buffer quit
-map("n", "<Leader>c",  ":noh<CR>",            opts)              -- clear search highlight
-map("v", "<C-c>",      "\"+yi",               { silent = true }) -- Ctrl-c
-map("i", "<C-v>",      "<ESC>\"+pa",          { silent = true }) -- Ctrl-v
-map("v", "<",          "<gv",                 { silent = true }) -- shift left 
-map("v", ">",          ">gv",                 { silent = true }) -- shift right
+map("n", "<Leader>w", ":w<CR><Space><Left>", opts)              -- quick save
+map("n", "<Leader>Q", ":bdelete!<CR>",       opts)              -- force buffer quit
+map("n", "<Leader>c", ":noh<CR>",            opts)              -- clear search highlight
+map("v", "<C-c>",     "\"+yi",               { silent = true }) -- Ctrl-c
+map("i", "<C-v>",     "<ESC>\"+pa",          { silent = true }) -- Ctrl-v
+map("v", "<",         "<gv",                 { silent = true }) -- shift left 
+map("v", ">",         ">gv",                 { silent = true }) -- shift right
 
 -- barbar
 map("n", "<S-Tab>",           ":BufferPrevious<CR>",     opts)
