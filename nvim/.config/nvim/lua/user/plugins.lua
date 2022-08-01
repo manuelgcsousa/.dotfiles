@@ -32,7 +32,7 @@ return packer.startup(function(use)
   -- colorschemes
   use "joshdick/onedark.vim"
   use "tomasiser/vim-code-dark"
-  
+
   -- tree and bars
   use "kyazdani42/nvim-tree.lua"
   use "romgrk/barbar.nvim"

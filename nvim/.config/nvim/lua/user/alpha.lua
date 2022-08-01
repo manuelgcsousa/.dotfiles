@@ -7,6 +7,17 @@ local function button(sc, txt, keybind, keybind_opts)
   return b
 end
 
+dashboard.section.header.val = {
+  "                                                    ",
+  " ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ ",
+  " ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║ ",
+  " ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║ ",
+  " ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║ ",
+  " ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║ ",
+  " ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ ",
+  "                                                    "
+}
+
 dashboard.section.buttons.val = {
   button("e",   "  New file",  "<cmd>ene <CR>"),
   button("C-f", "  Find file", "<cmd>lua require('telescope.builtin').find_files()<CR>"),
