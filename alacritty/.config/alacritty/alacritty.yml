@@ -14,12 +14,12 @@ font:
 
 colors:
   primary:
-    background: '#1C1C1C'
-    foreground: '#DDDDDD'
+    background: "#1C1C1C"
+    foreground: "#DDDDDD"
 
   normal:
-    red:   '#CD3131'
-    green: '#12C739'
-    cyan:  '#11A8CD'
+    red:   "#CD3131"
+    green: "#12C739"
+    cyan:  "#11A8CD"
 
 draw_bold_text_with_bright_colors: false
