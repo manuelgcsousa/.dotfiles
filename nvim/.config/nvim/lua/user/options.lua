@@ -31,7 +31,7 @@ local options = {
   termguicolors = true
 }
 vim.cmd[[
-set fillchars+=vert:\┃
+set fillchars+=vert:▎
 set fillchars+=eob:\ 
 
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
