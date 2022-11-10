@@ -38,6 +38,7 @@ return packer.startup(function(use)
   use "romgrk/barbar.nvim"
   use "nvim-lualine/lualine.nvim"
   use "kyazdani42/nvim-web-devicons"
+  use "akinsho/bufferline.nvim"
 
   -- utils
   use "jiangmiao/auto-pairs"
@@ -55,4 +56,7 @@ return packer.startup(function(use)
     "nvim-telescope/telescope.nvim",
     requires = {{ "nvim-lua/plenary.nvim" }}
   }
+
+  -- shitshow
+  use "alec-gibson/nvim-tetris"
 end)

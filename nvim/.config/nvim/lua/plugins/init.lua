@@ -1,0 +1,11 @@
+require("plugins.packer")
+
+require("plugins.config.lsp")
+require("plugins.config.colorscheme")
+require("plugins.config.alpha")
+require("plugins.config.barbar")
+require("plugins.config.gitsigns")
+require("plugins.config.lualine")
+require("plugins.config.nvim-tree")
+require("plugins.config.telescope")
+require("plugins.config.treesitter")
