@@ -22,12 +22,12 @@ local options = {
   completeopt = { "menuone", "noselect" },
   signcolumn = "yes",
   viminfo = "",
-  showtabline = 2,
+  showtabline = 0,
   cursorline = true,
   laststatus = 3,
   --showmode = false,
   swapfile = false,
-  errorbells = false ,
+  errorbells = false,
   termguicolors = true
 }
 

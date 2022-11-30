@@ -1,14 +1,28 @@
-vim.cmd[[
-colorscheme codedark
-set background=dark
+--vim.cmd[[
+--set t_Co=256
+--set t_ut=
+--colorscheme codedark
+--
+--" change codedark default local settings:
+--" let s:cdBack = {'gui': '#1C1C1C', 'cterm': s:cterm00, 'cterm256': '234'}
+--" let s:cdTabCurrent = {'gui': '#1C1C1C', 'cterm': s:cterm00, 'cterm256': '234'}
+--" call <sid>hi('ModeMsg', s:cdFront, s:cdBack, 'none', {})
+--]]
 
-hi Normal              guibg=#1C1C1C
-hi NormalFloat         guibg=#1C1C1C
-hi EndOfBuffer         guibg=#1C1C1C
+vim.o.background = "dark"
 
-hi VertSplit           guifg=#5A5A5A
-hi LineNr              guibg=#1C1C1C
-hi BufferInactive      guibg=#252526 guifg=#666666
-hi BufferCurrentSign                 guifg=#68AFE9
-hi ModeMsg             guibg=#1C1C1C
-]]
+local c = require("vscode.colors")
+require("vscode").setup({
+  italic_comments = true,
+
+  color_overrides = {
+    vscBack = "#1C1C1C"
+  },
+
+  group_overrides = {
+    ModeMsg = { fg = c.vscFront, bg = "#1C1C1C" },
+    TelescopePromptBorder = { fg = "#DDDDDD", bg = "NONE" },
+    TelescopeResultsBorder = { fg = "#DDDDDD", bg = "NONE" },
+    TelescopePreviewBorder = { fg = "#DDDDDD", bg = "NONE" }
+  }
+})

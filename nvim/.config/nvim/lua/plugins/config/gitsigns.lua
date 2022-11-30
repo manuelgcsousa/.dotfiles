@@ -1,8 +1,3 @@
-local on_attach = function(client)
-  -- "lua/user/mappings.lua"
-  load_gitsigns_mappings()
-end
-
 require("gitsigns").setup{
   --signs = {
   --  add          = {hl = 'GitSignsAdd'   , text = '│', numhl='GitSignsAddNr'   , linehl='GitSignsAddLn'},

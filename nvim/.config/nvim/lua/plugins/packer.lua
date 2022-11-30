@@ -30,15 +30,13 @@ return packer.startup(function(use)
   use "onsails/lspkind-nvim"
 
   -- colorschemes
-  use "joshdick/onedark.vim"
   use "tomasiser/vim-code-dark"
+  use "Mofiqul/vscode.nvim"
+  use "kyazdani42/nvim-web-devicons"
 
   -- tree and bars
   use "kyazdani42/nvim-tree.lua"
-  use "romgrk/barbar.nvim"
   use "nvim-lualine/lualine.nvim"
-  use "kyazdani42/nvim-web-devicons"
-  use "akinsho/bufferline.nvim"
 
   -- utils
   use "jiangmiao/auto-pairs"
