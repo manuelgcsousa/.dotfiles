@@ -6,7 +6,7 @@ layouts = [
         border_focus="#285577",
         border_normal="#222222",
         border_on_single=True,
-        border_width=3,
+        border_width=2,
         margin=5
     ),
     # ...

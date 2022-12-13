@@ -40,7 +40,7 @@ keys = [
     # system
     Key([mod, "shift"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "shift"], "q", lazy.window.kill(), desc="Kill focused window"),
-    Key([mod, "shift"], "e", lazy.spawn(f"{HOME}/.config/i3/scripts/powermenu"), desc="Exit"),
+    Key([mod, "shift"], "e", lazy.spawn(f"{HOME}/.config/qtile/scripts/powermenu"), desc="Exit"),
     Key([mod, "control", "shift"], "l", lazy.shutdown(), desc="Logout"),
     Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer set 'Master' 5%+ 1>/dev/null"), desc="Volume Up"),
     Key([], "XF86AudioLowerVolume", lazy.spawn("amixer set 'Master' 5%- 1>/dev/null"), desc="Volume Down"),
@@ -53,5 +53,5 @@ keys = [
 mouse = [
     Drag([mod], "Button1", lazy.window.set_position_floating(), start=lazy.window.get_position()),
     Drag([mod], "Button3", lazy.window.set_size_floating(), start=lazy.window.get_size()),
-    Click([mod], "Button2", lazy.window.bring_to_front()),
+    Click([mod], "Button2", lazy.window.bring_to_front())
 ]
