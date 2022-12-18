@@ -6,13 +6,10 @@ echo ". ~/.config/zsh/.zshenv" > ~/.zshenv
 # link with GNU stow
 stow -v \
     alacritty \
-    bspwm \
     dunst \
     i3 \
-    kitty \
     nvim \
     qtile \
-    rofi \
     tmux \
     zsh
 
