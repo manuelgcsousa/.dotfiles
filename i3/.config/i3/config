@@ -38,13 +38,30 @@ workspace $ws8  output primary
 workspace $ws9  output secondary 
 workspace $ws10 output secondary
 
-# status bar
+# primary status bar
 bar {
     status_command "i3blocks -c $HOME/.config/i3/bar/config"
     font pango:JetBrains Mono Regular Nerd Font 9
     output primary
     position top
+    colors {
+        background #000000
+        # focused_workspace  #000000 #000000 #FFFFFF
+        # inactive_workspace #000000 #000000 #444444
+    }
 }
+
+# secondary status bar
+# "eDP-1" -> laptop monitor
+# bar {
+#     font pango:JetBrains Mono Regular Nerd Font 9
+#     output eDP-1
+#     position top
+#     tray_output none
+#     colors {
+#         background #000000
+#     }
+# }
 
 # border with no window title
 for_window [class="^.*"] border pixel 2

@@ -23,7 +23,7 @@ if [[ "${status}" == "on" ]]; then
     echo "${icon}${volume}%"
     echo ""
 else
-    echo "婢  MUTE"
-    echo "婢  MUTE"
+    echo "婢 MUTE"
+    echo "婢 MUTE"
     echo ""
 fi
