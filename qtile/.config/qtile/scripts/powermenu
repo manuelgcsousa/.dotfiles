@@ -3,22 +3,22 @@
 chosen=$(printf "  Power Off\n  Reboot\n  Lock\n  Logout" | dmenu -i -l 5 -fn 'JetBrains Mono Nerd Font:pixelsize=14')
 
 case "$chosen" in
-	"  Power Off")
+    "  Power Off")
         poweroff
         ;;
 
-	"  Reboot")
+    "  Reboot")
         reboot
         ;;
 
-	"  Lock")
+    "  Lock")
         i3lock -c 1C1C1C
         ;;
 
-	"  Logout")
+    "  Logout")
         qtile cmd-obj -o cmd -f shutdown 
         ;;
-	
+
     *)
         exit 1
         ;;

@@ -4,16 +4,16 @@ output="$HOME/Pictures/screenshots/%Y-%m-%d-%T-screenshot.png"
 chosen=$(printf "Selection\nScreen" | dmenu -i -l 5 -fn 'JetBrains Mono Nerd Font:pixelsize=14')
 
 case "$chosen" in
-	"Selection")
+    "Selection")
         scrot "$output" --select --line mode=edge || exit
         ;;
 
-	"Screen")
+    "Screen")
         scrot "$output" --focused --border || exit
         ;;
 
     *)
-        scrot "$output" || exit
+        exit
         ;;
 esac
 
