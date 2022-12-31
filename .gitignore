@@ -1,7 +1,10 @@
 .DS_Store
+
 .zcompdump
 .zsh_history
 .zsh_sessions/
 .zcompcache/
+
 __pycache__
-nvim/.config/nvim/plugin/
+
+nvim/.config/nvim/plugin/packer_compiled.lua
