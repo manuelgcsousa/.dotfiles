@@ -32,6 +32,7 @@ return packer.startup(function(use)
   -- colorschemes
   use "tomasiser/vim-code-dark"
   use "Mofiqul/vscode.nvim"
+  use "navarasu/onedark.nvim"
   use "kyazdani42/nvim-web-devicons"
 
   -- tree and bars

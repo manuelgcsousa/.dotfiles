@@ -1,14 +1,3 @@
---vim.cmd[[
---set t_Co=256
---set t_ut=
---colorscheme codedark
---
---" change codedark default local settings:
---" let s:cdBack = {'gui': '#1C1C1C', 'cterm': s:cterm00, 'cterm256': '234'}
---" let s:cdTabCurrent = {'gui': '#1C1C1C', 'cterm': s:cterm00, 'cterm256': '234'}
---" call <sid>hi('ModeMsg', s:cdFront, s:cdBack, 'none', {})
---]]
-
 vim.o.background = "dark"
 
 local c = require("vscode.colors")
