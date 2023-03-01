@@ -24,6 +24,9 @@ autoload -U compinit && compinit
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
+# shell utils
+setopt ignoreeof
+
 # sane defaults
 alias \
     ls="ls -v --color" \
