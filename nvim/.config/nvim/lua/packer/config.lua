@@ -42,6 +42,7 @@ return packer.startup(function(use)
   -- utils
   use "jiangmiao/auto-pairs"
   use "lewis6991/gitsigns.nvim"
+  use "akinsho/git-conflict.nvim"
   use "tpope/vim-surround"
 
   -- treesitter

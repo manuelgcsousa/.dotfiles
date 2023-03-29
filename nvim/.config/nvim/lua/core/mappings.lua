@@ -4,16 +4,16 @@ local opts = { noremap = true, silent = true }
 vim.g.mapleader = ","
 
 -- defaults
-map("n", "<Leader>w", ":w<CR><Space><Left>", opts)              -- quick save
-map("n", "<Leader>Q", ":bdelete!<CR>",       opts)              -- force buffer quit
-map("n", "<Leader>b", ":b#<CR>",             opts)              -- previous buffer
-map("n", "<Leader>c", ":noh<CR>",            opts)              -- clear search highlight
-map("v", "<C-c>",     "\"+yi",               { silent = true }) -- Ctrl-c
-map("i", "<C-v>",     "<ESC>\"+pa",          { silent = true }) -- Ctrl-v
-map("v", "<",         "<gv",                 { silent = true }) -- shift left 
-map("v", ">",         ">gv",                 { silent = true }) -- shift right
+map("n", "<Leader>w", ":w<CR><Space><Left>",      opts)              -- quick save
+map("n", "<Leader>Q", ":bdelete!<CR>",            opts)              -- force buffer quit
+map("n", "<Leader>b", ":b#<CR>",                  opts)              -- previous buffer
+map("n", "<Leader>c", ":noh<CR>",                 opts)              -- clear search highlight
+map("v", "<C-c>",     "\"+yi",                    { silent = true }) -- Ctrl-c
+map("i", "<C-v>",     "<ESC>\"+pa",               { silent = true }) -- Ctrl-v
+map("v", "<",         "<gv",                      { silent = true }) -- shift left
+map("v", ">",         ">gv",                      { silent = true }) -- shift right
 
--- nvim-tree
+--- nvim-tree
 map("n", "<C-e>", ":NvimTreeToggle<CR>", opts)
 
 -- telescope
@@ -28,4 +28,4 @@ map("n", "<Leader>h",  "<cmd>lua vim.lsp.buf.hover()<CR>",         opts)
 map("n", "<Leader>sd", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
 
 -- gitsigns
-map("n", "<leader>lb", ":Gitsigns toggle_current_line_blame<CR>", opts)
+map("n", "<Leader>lb", ":Gitsigns toggle_current_line_blame<CR>", opts)
