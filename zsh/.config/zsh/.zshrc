@@ -39,6 +39,7 @@ alias \
 # aliases
 alias ..="cd ../"
 alias vim="$HOME/.local/bin/nvim/bin/nvim"
+alias cat="bat --theme 'Visual Studio Dark+'"
 
 # functions
 function mktar() { tar cvzf "${1%%/}.tar.gz" "${1%%/}/"; }
