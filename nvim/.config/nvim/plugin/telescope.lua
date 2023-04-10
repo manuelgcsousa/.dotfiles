@@ -1,6 +1,7 @@
 require("telescope").setup{
   defaults = {
-    path_display = { "smart" }
+    layout_strategy = "horizontal",
+    path_display = { "truncate" }
   },
   pickers = {
     find_files = {
