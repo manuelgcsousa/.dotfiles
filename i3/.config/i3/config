@@ -2,16 +2,15 @@
 set $mod Mod4
 
 # window titles font
-font pango:JetBrains Mono Regular Nerd Font 9
+font pango:Fira Sans Regular 11
 
 # Mouse+$mod to move floating windows
 floating_modifier $mod
 
 # startup applications
-# compositor; displays; network-manager; notifications
-exec --no-startup-id picom
+# displays; network-manager; notifications
 exec --no-startup-id "$HOME/.config/i3/scripts/monitor-bootstrap"
-exec --no-startup-id nm-applet
+exec --no-startup-id nm-applet &
 exec --no-startup-id "dunst -conf $HOME/.config/dunst/dunstrc"
 
 # define workspace names
@@ -41,7 +40,7 @@ workspace $ws10 output secondary
 # primary status bar
 bar {
     status_command "i3blocks -c $HOME/.config/i3/bar/config"
-    font pango:JetBrains Mono Regular Nerd Font 9
+    font pango:Fira Sans Regular 11
     output primary
     position top
     colors {
@@ -50,18 +49,6 @@ bar {
         # inactive_workspace #000000 #000000 #444444
     }
 }
-
-# secondary status bar
-# "eDP-1" -> laptop monitor
-# bar {
-#     font pango:JetBrains Mono Regular Nerd Font 9
-#     output eDP-1
-#     position top
-#     tray_output none
-#     colors {
-#         background #000000
-#     }
-# }
 
 # border with no window title
 for_window [class="^.*"] border pixel 2
