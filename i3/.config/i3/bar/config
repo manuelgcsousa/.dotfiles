@@ -24,8 +24,8 @@ signal=2
 [separator]
 
 [battery]
-label= 
-interval=30
+command=$HOME/.config/i3/bar/blocks/battery
+interval=5
 
 [separator]
 
