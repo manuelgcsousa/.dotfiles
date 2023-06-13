@@ -32,6 +32,9 @@ local options = {
 }
 
 vim.cmd[[
+set list
+set listchars+=trail:·
+
 set fillchars+=vert:▎
 set fillchars+=eob:\ 
 ]]
