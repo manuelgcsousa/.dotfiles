@@ -29,6 +29,7 @@ setopt ignoreeof
 
 # sane defaults
 alias \
+    ..="cd ../" \
     ls="ls -v --color" \
     cp="cp -iv" \
     rm="rm -i" \
@@ -37,9 +38,10 @@ alias \
     grep="grep --color=auto"
 
 # aliases
-alias ..="cd ../"
 alias vim="$HOME/.local/bin/nvim/bin/nvim"
 alias cat="bat --theme 'Visual Studio Dark+'"
+alias tf="terraform"
+eval $(thefuck --alias)
 
 # functions
 function mktar() { tar cvzf "${1%%/}.tar.gz" "${1%%/}/"; }
@@ -47,7 +49,7 @@ function untar() { tar xvzf "$1"; }
 function mkzip() { zip -r "${1%%/}.zip" "$1"; }
 
 
-# -----
+# ---
 
 
 # terraform completion

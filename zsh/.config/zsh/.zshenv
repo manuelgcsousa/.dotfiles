@@ -19,7 +19,7 @@ else
     export LSCOLORS=ExBxfxdxCxegedabagaced
 fi
 
-# PATH ...
+# PATH
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.scripts"
 export PATH="$PATH:$HOME/.config/bspwm/scripts"
@@ -30,5 +30,5 @@ export PATH="$PATH:$HOME/.cargo/bin"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
-# ... nix
+# nix
 export XDG_DATA_DIRS="$XDG_DATA_DIRS:$HOME/.nix-profile/share"
