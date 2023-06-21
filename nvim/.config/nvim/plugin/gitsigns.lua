@@ -1,4 +1,4 @@
-require("gitsigns").setup{
+require('gitsigns').setup{
   signcolumn = true,
   numhl = false,
   linehl = false,
@@ -6,7 +6,7 @@ require("gitsigns").setup{
   current_line_blame = false,
   current_line_blame_opts = {
     virt_text = true,
-    virt_text_pos = "right_align",
+    virt_text_pos = 'right_align',
     delay = 0,
     ignore_whitespace = false,
   },
