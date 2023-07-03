@@ -1,7 +1,7 @@
 #!/bin/sh
 
 output="$HOME/Pictures/screenshots/%Y-%m-%d-%T-screenshot.png"
-chosen=$(printf "Selection\nScreen" | dmenu -i -l 5 -fn 'JetBrains Mono Nerd Font:pixelsize=14')
+chosen=$(printf "Selection\nScreen" | dmenu -i -l 5 -fn 'JetBrains Mono Nerd Font:pixelsize=14' -nb \#000000 -nf \#D4D4D4)
 
 case "$chosen" in
     "Selection")
