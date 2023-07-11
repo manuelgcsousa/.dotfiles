@@ -8,10 +8,10 @@ font pango:Fira Sans Regular 11
 floating_modifier $mod
 
 # startup applications
-# displays; network-manager; notifications
+# displays; notifications; network-manager
 exec --no-startup-id "$HOME/.config/i3/scripts/monitor-bootstrap"
-exec --no-startup-id nm-applet &
 exec --no-startup-id "dunst -conf $HOME/.config/dunst/dunstrc"
+exec --no-startup-id nm-applet &
 
 # define workspace names
 set $ws1 "1"
@@ -35,8 +35,9 @@ workspace $ws5  output primary
 workspace $ws6  output primary
 workspace $ws7  output primary
 workspace $ws8  output primary
-workspace $ws9  output secondary 
+workspace $ws9  output primary
 workspace $ws10 output secondary
+workspace $MISC output primary
 
 # primary status bar
 bar {
@@ -45,7 +46,7 @@ bar {
     output primary
     position top
     colors {
-        background #000000
+        background #151515
         # focused_workspace  #000000 #000000 #FFFFFF
         # inactive_workspace #000000 #000000 #444444
     }
@@ -84,7 +85,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec ".config/i3/scripts/powermenu"
 
 # program launcher
-bindsym $mod+space exec "dmenu_run -i -l 10 -fn 'JetBrains Mono Nerd Font:pixelsize=14' -nb \#000000 -nf \#D4D4D4"
+bindsym $mod+space exec "rofi -show run -theme $HOME/.config/rofi/config.rasi"
 
 # monitor/display bootstrap
 bindsym $mod+Shift+b exec "$HOME/.config/i3/scripts/monitor-bootstrap"
