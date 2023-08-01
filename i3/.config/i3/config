@@ -12,6 +12,7 @@ floating_modifier $mod
 exec --no-startup-id "$HOME/.config/i3/scripts/monitor-bootstrap"
 exec --no-startup-id "dunst -conf $HOME/.config/dunst/dunstrc"
 exec --no-startup-id nm-applet &
+exec --no-startup-id xsetroot -solid "#333333"
 
 # define workspace names
 set $ws1 "1"
@@ -55,7 +56,10 @@ bar {
 # border with no window title
 for_window [class="^.*"] border pixel 2
 
-# resize window
+# gaps
+gaps inner 5
+
+# resize mode
 mode "resize" {
     bindsym Left resize shrink width 10 px or 10 ppt
     bindsym Down resize grow height 10 px or 10 ppt
@@ -63,6 +67,17 @@ mode "resize" {
     bindsym Right resize grow width 10 px or 10 ppt
 
     bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+# gaps mode
+set $mode_gaps Gaps: + | - | 0
+mode "$mode_gaps" {
+    bindsym plus  gaps inner current plus 5
+    bindsym minus gaps inner current minus 5
+    bindsym 0     gaps inner current set 0
+
+    bindsym Return mode "$mode_gaps"
     bindsym Escape mode "default"
 }
 
@@ -105,8 +120,10 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Right move right
 
-# enter resize mode
+# enter resize mode \
+# enter gaps mode
 bindsym $mod+r mode "resize"
+bindsym $mod+g mode "$mode_gaps"
 
 # split in horizontal orientation \
 # split in vertical orientation \

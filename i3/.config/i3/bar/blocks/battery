@@ -1,9 +1,9 @@
 #!/usr/bin/bash
 
-I100=""
+I100="󰁹"
 I90=""
-I50=""
-I20=""
+I50="󰁾"
+I20="󰁻"
 ICHR=""
 
 percentage=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep 'percentage' | awk -F: '{print int($2)}')

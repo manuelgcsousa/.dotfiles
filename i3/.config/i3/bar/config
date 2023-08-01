@@ -29,9 +29,8 @@ interval=5
 
 [separator]
 
-[time]
-label= 
-command=date '+%a, %b %d :: %H:%M'
+[datetime]
+command=$HOME/.config/i3/bar/blocks/datetime
 interval=3
 
 [separator]

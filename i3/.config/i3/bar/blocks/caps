@@ -3,11 +3,11 @@
 caps_lock_status=$(xset -q | sed -n 's/^.*Caps Lock:\s*\(\S*\).*$/\1/p')
 
 if [ $caps_lock_status == "on" ]; then
-    echo "CAPS"
-    echo "CAPS"
+    echo "󰪛  CAPS"
+    echo "󰪛  CAPS"
     echo "#FF0000"
 else
-    echo "CAPS"
-    echo "CAPS"
+    echo "󰪛  CAPS"
+    echo "󰪛  CAPS"
     echo "#222222"
 fi
