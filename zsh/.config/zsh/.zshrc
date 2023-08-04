@@ -27,6 +27,14 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 # shell utils
 setopt ignoreeof
 
+# ls colors
+if [[ $(uname -s) == "Linux" ]]; then
+    export LS_COLORS="di=1;36:ln=1;31:so=35:pi=33:ex=1;32:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=34;43"
+else
+    export CLICOLOR=1
+    export LSCOLORS=ExBxfxdxCxegedabagaced
+fi
+
 # sane defaults
 alias \
     ..="cd ../" \
