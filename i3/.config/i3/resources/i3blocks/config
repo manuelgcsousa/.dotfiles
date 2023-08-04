@@ -1,7 +1,7 @@
 # i3blocks config
 
 # global properties
-command=/usr/share/i3blocks/$BLOCK_NAME
+command=$HOME/.config/i3/resources/i3blocks/blocks/$BLOCK_NAME
 markup=none
 full_text=|
 align=center
@@ -9,28 +9,26 @@ separator=false
 separator_block_width=8
 
 
+# blocks (in order)
+
 [caps]
-command=$HOME/.config/i3/bar/blocks/caps
 interval=once
 signal=11
 
 [separator]
 
 [volume]
-command=$HOME/.config/i3/bar/blocks/volume
 interval=once
 signal=2
 
 [separator]
 
 [battery]
-command=$HOME/.config/i3/bar/blocks/battery
 interval=5
 
 [separator]
 
 [datetime]
-command=$HOME/.config/i3/bar/blocks/datetime
 interval=3
 
 [separator]

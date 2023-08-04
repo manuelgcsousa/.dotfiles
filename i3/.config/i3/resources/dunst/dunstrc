@@ -1,8 +1,9 @@
 [global]
 monitor = 0
 follow = mouse
-width = 300
-height = 300
+# width = 300
+# height = 300
+geometry = "310x5-10+35"
 origin = top-right
 offset = 0x50
 progress_bar = true
@@ -13,7 +14,7 @@ progress_bar_max_width = 400
 indicate_hidden = yes
 shrink = no
 separator_height = 2
-padding = 8
+padding = 20
 horizontal_padding = 8
 text_icon_padding = 0
 frame_width = 1
@@ -66,3 +67,5 @@ timeout = 10
 background = "#11121D"
 foreground = "#EE6D85"
 timeout = 30
+
+# vim: ft=cfg

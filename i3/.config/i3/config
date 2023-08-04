@@ -1,18 +1,11 @@
 # mod key (super)
 set $mod Mod4
 
-# window titles font
-font pango:Fira Sans Regular 11
-
-# Mouse+$mod to move floating windows
-floating_modifier $mod
-
-# startup applications
-# displays; notifications; network-manager
-exec --no-startup-id "$HOME/.config/i3/scripts/monitor-bootstrap"
-exec --no-startup-id "dunst -conf $HOME/.config/dunst/dunstrc"
-exec --no-startup-id nm-applet &
-exec --no-startup-id xsetroot -solid "#333333"
+# define default apps commands
+set $BAR           "i3blocks -c $HOME/.config/i3/resources/i3blocks/config"
+set $LAUNCHER      "rofi -show run -theme $HOME/.config/i3/resources/rofi/config.rasi"
+set $NOTIFICATIONS "dunst -conf $HOME/.config/i3/resources/dunst/dunstrc"
+set $TERMINAL      "WINIT_X11_SCALE_FACTOR=1 $HOME/.cargo/bin/alacritty"
 
 # define workspace names
 set $ws1 "1"
@@ -40,24 +33,24 @@ workspace $ws9  output primary
 workspace $ws10 output secondary
 workspace $MISC output primary
 
-# primary status bar
+# i3 default font \
+# default border with no window title \
+# gaps \
+# mouse+$mod to move floating windows
+font pango:Fira Sans Regular 11
+for_window [class="^.*"] border pixel 2
+gaps inner 5
+floating_modifier $mod
+
+# status bar
 bar {
-    status_command "i3blocks -c $HOME/.config/i3/bar/config"
-    font pango:Fira Sans Regular 11
+    status_command $BAR
     output primary
     position top
     colors {
         background #151515
-        # focused_workspace  #000000 #000000 #FFFFFF
-        # inactive_workspace #000000 #000000 #444444
     }
 }
-
-# border with no window title
-for_window [class="^.*"] border pixel 2
-
-# gaps
-gaps inner 5
 
 # resize mode
 mode "resize" {
@@ -81,13 +74,20 @@ mode "$mode_gaps" {
     bindsym Escape mode "default"
 }
 
+# startup applications
+# network-manager; notifications; displays; background
+exec --no-startup-id nm-applet &
+exec --no-startup-id $NOTIFICATIONS
+exec --no-startup-id "$HOME/.config/i3/resources/scripts/monitor-bootstrap"
+exec --no-startup-id xsetroot -solid "#333333"
+
 
 # =============================================================================
 # keychords
 # =============================================================================
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id WINIT_X11_SCALE_FACTOR=1 ~/.cargo/bin/alacritty
+bindsym $mod+Return exec --no-startup-id $TERMINAL
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -97,16 +97,16 @@ bindsym $mod+Shift+q kill
 # exit i3
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
-bindsym $mod+Shift+e exec ".config/i3/scripts/powermenu"
+bindsym $mod+Shift+e exec "$HOME/.config/i3/resources/scripts/powermenu"
 
 # program launcher
-bindsym $mod+space exec "rofi -show run -theme $HOME/.config/rofi/config.rasi"
+bindsym $mod+space exec $LAUNCHER
 
 # monitor/display bootstrap
-bindsym $mod+Shift+b exec "$HOME/.config/i3/scripts/monitor-bootstrap"
+bindsym $mod+Shift+b exec "$HOME/.config/i3/resources/scripts/monitor-bootstrap"
 
 # screenshot
-bindsym $mod+Shift+p exec "$HOME/.config/i3/scripts/screenshot"
+bindsym $mod+Shift+p exec "$HOME/.config/i3/resources/scripts/screenshot"
 
 # change focus
 bindsym $mod+Left focus left
