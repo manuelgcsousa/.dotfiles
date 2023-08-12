@@ -42,6 +42,8 @@ return packer.startup(function(use)
     run = ':TSUpdate'
   }
 
+  -- use 'stevearc/oil.nvim'
+
   -- LSP
   use {
     'neovim/nvim-lspconfig',
