@@ -13,3 +13,6 @@ lsp.pyright.setup{
 
 -- Golang
 lsp.gopls.setup{}
+
+-- Terraform
+lsp.terraformls.setup{}
