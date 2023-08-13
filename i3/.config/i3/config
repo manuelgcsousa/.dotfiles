@@ -2,10 +2,10 @@
 set $mod Mod4
 
 # define default apps commands
+set $TERMINAL      "WINIT_X11_SCALE_FACTOR=1 $HOME/.cargo/bin/alacritty"
 set $BAR           "i3blocks -c $HOME/.config/i3/resources/i3blocks/config"
 set $LAUNCHER      "rofi -show run -theme $HOME/.config/i3/resources/rofi/config.rasi"
 set $NOTIFICATIONS "dunst -conf $HOME/.config/i3/resources/dunst/dunstrc"
-set $TERMINAL      "WINIT_X11_SCALE_FACTOR=1 $HOME/.cargo/bin/alacritty"
 
 # define workspace names
 set $ws1 "1"
