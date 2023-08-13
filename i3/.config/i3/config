@@ -78,7 +78,7 @@ mode "$mode_gaps" {
 # network-manager; notifications; displays; background
 exec --no-startup-id nm-applet &
 exec --no-startup-id $NOTIFICATIONS
-exec --no-startup-id "$HOME/.config/i3/resources/scripts/monitor-bootstrap"
+exec --no-startup-id "$HOME/.config/i3/resources/scripts/monitor-bootstrap laptop"
 exec --no-startup-id xsetroot -solid "#333333"
 
 
