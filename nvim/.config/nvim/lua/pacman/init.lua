@@ -49,8 +49,9 @@ return packer.startup(function(use)
     'neovim/nvim-lspconfig',
     'jose-elias-alvarez/null-ls.nvim',
     'hrsh7th/nvim-cmp',
-    'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-buffer',
+    'hrsh7th/cmp-path',
     { 'onsails/lspkind-nvim', commit = 'c68b3a003483cf382428a43035079f78474cd11e' }
   }
 end)

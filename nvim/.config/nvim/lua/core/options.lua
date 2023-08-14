@@ -28,15 +28,22 @@ local options = {
   showmode = false,
   swapfile = false,
   errorbells = false,
-  termguicolors = true
+  termguicolors = true,
+  fillchars = {
+    eob = ' ',
+    horiz = '━',
+    horizup = '┻',
+    horizdown = '┳',
+    vert = '┃',
+    vertleft  = '┫',
+    vertright = '┣',
+    verthoriz = '╋',
+  }
 }
 
 vim.cmd[[
 set list
 set listchars+=trail:·
-
-set fillchars+=vert:▎
-set fillchars+=eob:\ 
 ]]
 
 for k, v in pairs(options) do
