@@ -32,7 +32,7 @@ return packer.startup(function(use)
     'lewis6991/gitsigns.nvim',
     'akinsho/git-conflict.nvim',
     -- 'stevearc/oil.nvim',
-    'rcarriga/nvim-notify',
+    -- 'rcarriga/nvim-notify',
     { 'kyazdani42/nvim-web-devicons', commit = 'c3c1dc4e36969370ff589b7025df8ec2e5c881a2' }
   }
 
