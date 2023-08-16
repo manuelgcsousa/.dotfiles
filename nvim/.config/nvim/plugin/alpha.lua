@@ -19,14 +19,13 @@ dashboard.section.header.val = {
 }
 
 dashboard.section.buttons.val = {
-  button('e',   '  New file',  '<cmd>ene <CR>'),
-  button('C-f', '  Find file', '<cmd>lua require("telescope.builtin").find_files()<CR>'),
-  button('C-g', '  Find word', '<cmd>lua require("telescope.builtin").live_grep()<CR>'),
-  button('c',   '  Config',    ':e $HOME/.config/nvim/ <CR>'),
+  button('e',   '  New file',  ':ene<CR>'),
+  button('C-f', '  Find file', ':Telescope find_files<CR>'),
+  button('C-g', '  Find word', ':Telescope live_grep<CR>'),
+  button('c',   '  Config',    ':e $HOME/.config/nvim/<CR>'),
   button('q',   '  Quit',      ':qa<CR>'),
 }
 
-local function footer()
+dashboard.section.footer.val = function()
   return 'manuelgcsousa.github.io'
 end
-dashboard.section.footer.val = footer()
