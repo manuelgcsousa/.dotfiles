@@ -32,7 +32,10 @@ cmp.setup{
     end, {
       'i',
       's'
-    })
+    }),
+
+    ['<C-u>'] = cmp.mapping(cmp.mapping.scroll_docs(-5), { 'i', 'c' }),
+    ['<C-d>'] = cmp.mapping(cmp.mapping.scroll_docs(5),  { 'i', 'c' })
   },
 
   formatting = {
@@ -43,10 +46,15 @@ cmp.setup{
   },
 
   sources = {
-    { name = 'nvim_lua' },  -- nvim dev
     { name = 'nvim_lsp' },
     { name = 'path' },
     { name = 'buffer', keyword_length = 5 }
+  },
+
+  window = {
+    documentation = {
+      border = 'single'
+    }
   },
 
   experimental = {

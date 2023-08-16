@@ -50,7 +50,11 @@ return packer.startup(function(use)
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-path',
-    'hrsh7th/cmp-nvim-lua',
     { 'onsails/lspkind-nvim', commit = 'c68b3a003483cf382428a43035079f78474cd11e' }
+  }
+
+  -- neovim dev (lua)
+  use {
+    'folke/neodev.nvim'
   }
 end)
