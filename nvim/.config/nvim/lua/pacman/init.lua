@@ -13,14 +13,14 @@ return packer.startup(function(use)
   use 'wbthomason/packer.nvim'
 
   use {
-    'Mofiqul/vscode.nvim',
-    commit = '64e107c31da7d73048681b77a43f5e019d850980'
-  }
-
-  use {
     'nvim-telescope/telescope.nvim',
     branch = '0.1.x',
     requires = {{ 'nvim-lua/plenary.nvim' }}
+  }
+
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
   }
 
   use {
@@ -31,14 +31,11 @@ return packer.startup(function(use)
     'tpope/vim-surround',
     'lewis6991/gitsigns.nvim',
     'akinsho/git-conflict.nvim',
+    'folke/neodev.nvim',
     -- 'stevearc/oil.nvim',
     -- 'rcarriga/nvim-notify',
+    { 'Mofiqul/vscode.nvim', commit = '64e107c31da7d73048681b77a43f5e019d850980' },
     { 'kyazdani42/nvim-web-devicons', commit = 'c3c1dc4e36969370ff589b7025df8ec2e5c881a2' }
-  }
-
-  use {
-    'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate'
   }
 
   -- LSP & Completion
@@ -51,10 +48,5 @@ return packer.startup(function(use)
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-path',
     { 'onsails/lspkind-nvim', commit = 'c68b3a003483cf382428a43035079f78474cd11e' }
-  }
-
-  -- neovim dev (lua)
-  use {
-    'folke/neodev.nvim'
   }
 end)
