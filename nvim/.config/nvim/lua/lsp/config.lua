@@ -1,6 +1,3 @@
--- setup neovim lua dev before 'lspconfig'
-require('neodev').setup{}
-
 local lsp = require('lspconfig')
 
 -- Python
@@ -21,6 +18,7 @@ lsp.gopls.setup{}
 lsp.terraformls.setup{}
 
 -- Lua
+require('neodev').setup{}  -- neovim lua dev
 lsp.lua_ls.setup{
   settings = {
     Lua = {
