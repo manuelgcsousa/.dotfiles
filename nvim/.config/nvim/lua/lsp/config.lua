@@ -5,7 +5,8 @@ lsp.pyright.setup{
   settings = {
     python = {
       analysis = {
-        typeCheckingMode = 'basic'
+        typeCheckingMode = 'basic',
+        diagnosticMode = 'openFilesOnly'
       }
     }
   }
