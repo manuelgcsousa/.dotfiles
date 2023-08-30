@@ -12,8 +12,5 @@ export LANG=pt_PT.UTF-8
 # PATH
 export PATH="$PATH:$HOME/.local/bin:$HOME/.scripts:/usr/local/go/bin:$HOME/.cargo/bin:$HOME/.local/share/go/bin"
 
-
-# ... change default configs ...
-
 # go
 export GOPATH="$HOME/.local/share/go"

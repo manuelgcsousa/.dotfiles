@@ -4,7 +4,7 @@ function parse_git_branch() {
     [ $branch ] && echo " :: %F{green}$branch%f"
 }
 setopt PROMPT_SUBST
-PROMPT=$'\n[%n %F{8}%~%f$(parse_git_branch)]\n$ '
+PROMPT=$'\n[%F{8}%~%f$(parse_git_branch)]\n$ '
 export PROMPTBK=$PROMPT
 
 # history
