@@ -8,8 +8,11 @@ gsettings set org.gnome.shell.keybindings toggle-overview "['<Super>Space']"
 gsettings set org.gnome.desktop.wm.keybindings maximize "['<Super>f']"
 gsettings set org.gnome.desktop.wm.keybindings close "['<Shift><Super>q']"
 
+# alt-tab on current workspace only
+gsettings set org.gnome.shell.app-switcher current-workspace-only true
+
 # workspace switching
 for i in {1..9}
 do
-    gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-$i "['<Super>$i']"
+  gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-$i "['<Super>$i']"
 done
