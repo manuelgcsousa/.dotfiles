@@ -12,6 +12,10 @@ for config in "${configs[@]}"; do
   ln -fsv "$HOME/.dotfiles/config/$config" "$HOME/.config/"
 done
 
+# vim
+ln -fsv "$HOME/.dotfiles/config/vim/vimrc" "$HOME/.vimrc"
+
+# vscode
 if [ "$(uname -s)" = "Linux" ]; then
   ln -fsv "$HOME/.dotfiles/config/vscode/settings.json" "$HOME/.config/Code/User/settings.json"
 else

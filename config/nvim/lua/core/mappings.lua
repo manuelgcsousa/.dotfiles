@@ -28,6 +28,6 @@ map('n', '<Leader>lb', ':Gitsigns toggle_current_line_blame<CR>', opts)
 
 -- LSP
 map('n', '<Leader>r',  ':Telescope lsp_references<CR>',            opts)
-map('n', '<Leader>d',  '<cmd>lua vim.lsp.buf.declaration()<CR>',   opts)
+map('n', '<Leader>d',  '<cmd>lua vim.lsp.buf.definition()<CR>',    opts)
 map('n', '<Leader>h',  '<cmd>lua vim.lsp.buf.hover()<CR>',         opts)
 map('n', '<Leader>sd', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
