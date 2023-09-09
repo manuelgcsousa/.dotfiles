@@ -50,6 +50,4 @@ alias vim="nvim"
 alias cat="batcat --theme 'Visual Studio Dark+'"
 
 # functions
-function mktar() { tar cvzf "${1%%/}.tar.gz" "${1%%/}/"; }
-function untar() { tar xvzf "$1"; }
-function mkzip() { zip -r "${1%%/}.zip" "$1"; }
+source "$HOME/.config/zsh/.functions"

@@ -7,8 +7,17 @@ echo -e "${LGREEN}Installing utils...${RESET}"
 
 sudo apt-get install -q \
   bat \
-  fzf \
   jq \
   ripgrep \
   tmux \
   tree
+
+# FZF
+if [ ! -d "$HOME/Sources/fzf" ]; then
+  mkdir -p "$HOME/Sources"
+  git clone --depth 1 "https://github.com/junegunn/fzf.git" "$HOME/Sources/fzf"
+fi
+
+cd "$HOME/Sources/fzf" \
+  && ./install \
+  && mv "./bin/fzf" "$HOME/.local/bin"

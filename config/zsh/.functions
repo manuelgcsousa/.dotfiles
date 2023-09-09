@@ -1,0 +1,32 @@
+#!/usr/bin/bash
+
+function mktar() {
+  tar -cvzf "${1%%/}.tar.gz" "${1%%/}/"
+}
+
+function untar() {
+  tar -xvzf "$1"
+}
+
+function mkzip() {
+  zip -r "${1%%/}.zip" "$1"
+}
+
+function unzip() {
+  unzip "$1" -d "$1.ext"
+}
+
+# 'git checkout' with FZF
+function fcheckout() {
+  if [ -n "$(git status 2> /dev/null)" ]; then
+    branch=$(
+      git branch | grep -v '^\*' | tr -d ' ' |
+      fzf --reverse --border=bold --height=50% --color=hl:9,hl+:1
+    )
+    if [ -n "$branch" ]; then
+      git checkout $branch
+    fi
+  else
+    echo 'Current directory is not a git repository.'
+  fi
+}
