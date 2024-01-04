@@ -31,7 +31,6 @@ return packer.startup(function(use)
     'tpope/vim-surround',
     'lewis6991/gitsigns.nvim',
     'akinsho/git-conflict.nvim',
-    -- 'stevearc/oil.nvim',
     'rcarriga/nvim-notify',
     { 'Mofiqul/vscode.nvim', commit = '64e107c31da7d73048681b77a43f5e019d850980' },
     { 'kyazdani42/nvim-web-devicons', commit = 'c3c1dc4e36969370ff589b7025df8ec2e5c881a2' }
