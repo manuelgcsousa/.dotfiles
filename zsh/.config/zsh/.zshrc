@@ -35,6 +35,10 @@ else
     export LSCOLORS=ExBxfxdxCxegedabagaced
 fi
 
+# terraform completion
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/terraform terraform
+
 # sane defaults
 alias \
     ..="cd ../" \
@@ -52,14 +56,4 @@ alias tf="terraform"
 eval $(thefuck --alias)
 
 # functions
-function mktar() { tar cvzf "${1%%/}.tar.gz" "${1%%/}/"; }
-function untar() { tar xvzf "$1"; }
-function mkzip() { zip -r "${1%%/}.zip" "$1"; }
-
-
-# ---
-
-
-# terraform completion
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/bin/terraform terraform
+source "$HOME/.config/zsh/.functions"
